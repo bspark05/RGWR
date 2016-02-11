@@ -1,0 +1,88 @@
+   ***********************************************************************
+   *                       Package   GWmodel                             *
+   ***********************************************************************
+   Program starts at: 2016-02-10 20:08:04 
+   Call:
+   gwr.basic(formula = formula1, data = d, bw = bw1, kernel = "bisquare", 
+    adaptive = TRUE, dMat = DM)
+
+   Dependent (y) variable:  PRICE
+   Independent variables:  AGE COMPLEX COMDIST SUBWAY MAJROAD AGEAVE POPDEN BLSPOPF FIRENO TAX AREA FLOOR1 LAG
+   Number of data points: 2516
+   ***********************************************************************
+   *                    Results of Global Regression                     *
+   ***********************************************************************
+
+Call:
+lm(formula = formula, data = data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.37849 -0.04154  0.00091  0.04139  0.50305 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  0.2761612  0.1690511   1.634  0.10247    
+AGE         -0.1458736  0.0058352 -24.999  < 2e-16 ***
+COMPLEX      0.0925205  0.0034251  27.012  < 2e-16 ***
+COMDIST     -0.0017478  0.0034746  -0.503  0.61500    
+SUBWAY      -0.0259669  0.0047984  -5.412 6.84e-08 ***
+MAJROAD     -0.0165924  0.0051742  -3.207  0.00136 ** 
+AGEAVE       0.0031931  0.0887172   0.036  0.97129    
+POPDEN      -0.0071428  0.0062916  -1.135  0.25636    
+BLSPOPF     -0.2067667  0.0965693  -2.141  0.03236 *  
+FIRENO      -0.0006852  0.0002228  -3.076  0.00212 ** 
+TAX          0.0430798  0.0066627   6.466 1.21e-10 ***
+AREA         0.8927184  0.0107543  83.011  < 2e-16 ***
+FLOOR1      -0.0311773  0.0076730  -4.063 4.99e-05 ***
+LAG          1.0010701  0.0176004  56.878  < 2e-16 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.07327 on 2502 degrees of freedom
+Multiple R-squared:  0.8911,	Adjusted R-squared:  0.8905 
+F-statistic:  1575 on 13 and 2502 DF,  p-value: < 2.2e-16
+
+   ***Extra Diagnostic information
+   Residual sum of squares: 13.43186
+   Sigma(hat): 0.07309462
+   AIC:  -5995.617
+   AICc:  -5995.425
+   ***********************************************************************
+   *          Results of Geographically Weighted Regression              *
+   ***********************************************************************
+
+   *********************Model calibration information*********************
+   Kernel function: bisquare 
+   Adaptive bandwidth: 157 (number of nearest neighbours)
+   Regression points: the same locations as observations are used.
+   Distance metric: A distance matrix is specified for this model calibration.
+
+   ****************Summary of GWR coefficient estimates:******************
+                   Min.    1st Qu.     Median    3rd Qu.   Max.
+   Intercept -7.505e+00 -3.944e-02  1.290e+00  2.388e+00 8.8160
+   AGE       -3.163e-01 -2.367e-01 -2.010e-01 -1.509e-01 0.0462
+   COMPLEX    2.249e-02  7.323e-02  1.041e-01  1.277e-01 0.1828
+   COMDIST   -7.800e-02 -1.963e-02 -2.837e-03  1.758e-02 0.1667
+   SUBWAY    -1.198e-01 -5.670e-02 -3.335e-02 -9.063e-03 0.0567
+   MAJROAD   -9.357e-02 -2.135e-02 -7.806e-03  3.700e-03 0.1018
+   AGEAVE    -3.705e+00 -7.224e-01 -6.152e-02  6.599e-01 3.5690
+   POPDEN    -2.620e-01 -5.570e-02 -1.506e-02  2.745e-02 0.4186
+   BLSPOPF   -1.854e+01 -2.174e+00 -5.969e-01  1.355e-01 7.3960
+   FIRENO    -1.024e-02 -2.083e-03 -7.016e-04  6.285e-04 0.0065
+   TAX       -2.098e-01 -2.303e-03  2.896e-02  7.192e-02 0.3623
+   AREA       5.438e-01  7.942e-01  8.536e-01  9.199e-01 1.2340
+   FLOOR1    -2.034e-01 -6.409e-02 -3.949e-02 -9.337e-03 0.1038
+   LAG       -1.404e+00  4.960e-01  7.767e-01  1.088e+00 2.0060
+   ************************Diagnostic information*************************
+   Number of data points: 2516 
+   Effective number of parameters (2trace(S) - trace(S'S)): 573.7324 
+   Effective degrees of freedom (n-2trace(S) + trace(S'S)): 1942.268 
+   AICc (GWR book, Fotheringham, et al. 2002, p. 61, eq 2.33): -6679.284 
+   AIC (GWR book, Fotheringham, et al. 2002,GWR p. 96, eq. 4.22): -7345.264 
+   Residual sum of squares: 6.625822 
+   R-square value:  0.9462883 
+   Adjusted R-square value:  0.930414 
+
+   ***********************************************************************
+   Program stops at: 2016-02-10 20:08:28 

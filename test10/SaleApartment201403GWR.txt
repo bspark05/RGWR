@@ -1,7 +1,7 @@
    ***********************************************************************
    *                       Package   GWmodel                             *
    ***********************************************************************
-   Program starts at: 2016-02-04 15:43:27 
+   Program starts at: 2016-02-07 19:42:55 
    Call:
    gwr.basic(formula = formula1, data = d, bw = bw1, kernel = "bisquare", 
     adaptive = TRUE, dMat = DM)
@@ -83,4 +83,4 @@ F-statistic: 627.7 on 12 and 2504 DF,  p-value: < 2.2e-16
    Adjusted R-square value:  0.9328089 
 
    ***********************************************************************
-   Program stops at: 2016-02-04 15:43:51 
+   Program stops at: 2016-02-07 19:43:21 

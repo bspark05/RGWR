@@ -1,0 +1,78 @@
+   ***********************************************************************
+   *                       Package   GWmodel                             *
+   ***********************************************************************
+   Program starts at: 2016-02-05 14:24:25 
+   Call:
+   gwr.basic(formula = formula1, data = d, bw = bw1, kernel = "bisquare", 
+    adaptive = TRUE, dMat = DM)
+
+   Dependent (y) variable:  DISTANCE1
+   Independent variables:  WHITE HISP BLWPOV MEDINC UPTOHIGH INS MEDICARE MEDICAID
+   Number of data points: 4121
+   ***********************************************************************
+   *                    Results of Global Regression                     *
+   ***********************************************************************
+
+Call:
+lm(formula = formula, data = data)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+ -9884  -2538   -656   1675  22844 
+
+Coefficients:
+            Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  1659.38     802.07   2.069  0.03862 *  
+WHITE        4809.94     296.75  16.208  < 2e-16 ***
+HISP        -8810.47     416.20 -21.169  < 2e-16 ***
+BLWPOV      -4780.82     648.87  -7.368 2.08e-13 ***
+MEDINC        -50.41      98.40  -0.512  0.60849    
+UPTOHIGH    11136.68     551.91  20.179  < 2e-16 ***
+INS          -603.50     690.83  -0.874  0.38240    
+MEDICARE    -5132.43    1985.09  -2.585  0.00976 ** 
+MEDICAID     2313.16     905.02   2.556  0.01063 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 3859 on 4112 degrees of freedom
+Multiple R-squared:  0.1763,	Adjusted R-squared:  0.1747 
+F-statistic:   110 on 8 and 4112 DF,  p-value: < 2.2e-16
+
+   ***Extra Diagnostic information
+   Residual sum of squares: 61227317269
+   Sigma(hat): 3855.465
+   AIC:  79769.12
+   AICc:  79769.17
+   ***********************************************************************
+   *          Results of Geographically Weighted Regression              *
+   ***********************************************************************
+
+   *********************Model calibration information*********************
+   Kernel function: bisquare 
+   Adaptive bandwidth: 63 (number of nearest neighbours)
+   Regression points: the same locations as observations are used.
+   Distance metric: A distance matrix is specified for this model calibration.
+
+   ****************Summary of GWR coefficient estimates:******************
+                   Min.    1st Qu.     Median    3rd Qu.   Max.
+   Intercept -196300.00   -8257.00     660.30    7631.00 141100
+   WHITE      -33460.00   -1488.00     -16.60    1807.00  46190
+   HISP       -47840.00   -2113.00    -316.80    1228.00  49820
+   BLWPOV     -30030.00   -2800.00    -287.60    1997.00  47850
+   MEDINC     -31430.00    -697.60     532.10    2599.00  47340
+   UPTOHIGH   -20680.00   -1155.00     619.20    3007.00  50790
+   INS        -43120.00   -1964.00     -13.12    2090.00  30980
+   MEDICARE   -81140.00   -6687.00    -549.60    5032.00 110400
+   MEDICAID   -68690.00   -1880.00     642.50    3344.00  73060
+   ************************Diagnostic information*************************
+   Number of data points: 4121 
+   Effective number of parameters (2trace(S) - trace(S'S)): 1709.052 
+   Effective degrees of freedom (n-2trace(S) + trace(S'S)): 2411.948 
+   AICc (GWR book, Fotheringham, et al. 2002, p. 61, eq 2.33): 74591.28 
+   AIC (GWR book, Fotheringham, et al. 2002,GWR p. 96, eq. 4.22): 71963.84 
+   Residual sum of squares: 6692266157 
+   R-square value:  0.9099685 
+   Adjusted R-square value:  0.8461477 
+
+   ***********************************************************************
+   Program stops at: 2016-02-05 14:26:07 
